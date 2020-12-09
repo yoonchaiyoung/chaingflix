@@ -2,6 +2,12 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
+
+  // local에서 테스트 할 때는
+  // baseURL: 'http://localhost:5000/',
+
+  // 배포할 때는 AWS의 DB를 연결
+  // baseURL: "aws ip (배포 직전)",
   params: {
     api_key: "f02b39f36febafba0161b0cd7bb4e12f",
     language: "ko-KR",
